@@ -1,0 +1,7 @@
+extends CharacterBody2D
+
+func _ready() -> void:
+	$Sound.play()
+	
+func _on_animated_sprite_2d_animation_finished() -> void:
+	queue_free()

@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://dj3op3kcxcmdd"]
+
+[ext_resource type="Shader" uid="uid://dmqnb0nchmedw" path="res://sky.gdshader" id="1_dptxg"]
+[ext_resource type="Texture2D" uid="uid://bpp6ttb4oukfl" path="res://assets/background.png" id="2_py8sg"]
+[ext_resource type="Script" uid="uid://xkbjg1auxvcn" path="res://texture_rect.gd" id="3_py8sg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4krsh"]
+shader = ExtResource("1_dptxg")
+
+[node name="sky" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_4krsh")
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_py8sg")
+script = ExtResource("3_py8sg")
